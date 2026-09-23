@@ -1,0 +1,22 @@
+{
+  "name": "offgen",
+  "version": "0.1.0",
+  "description": "Generate branded, consultant-quality PowerPoint decks from your organization's offgen workflows.",
+  "author": {
+    "name": "offgen",
+    "email": "support@offgen.ai",
+    "url": "https://offgen.ai"
+  },
+  "homepage": "https://offgen.ai",
+  "license": "Proprietary",
+  "keywords": ["powerpoint", "pptx", "presentations", "slides", "mcp"],
+  "userConfig": {
+    "offgen_api_key": {
+      "type": "string",
+      "title": "offgen API key",
+      "description": "Optional. Leave empty to sign in with your offgen account. Or paste an organization API key (offgen_\u2026) from https://app.offgen.ai/settings/api-keys.",
+      "sensitive": true,
+      "required": false
+    }
+  }
+}

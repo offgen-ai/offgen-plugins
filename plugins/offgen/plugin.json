@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "offgen",
+  "version": "0.1.0",
+  "description": "Generate branded, consultant-quality PowerPoint decks from your organization's offgen workflows.",
+  "author": {
+    "name": "offgen",
+    "email": "support@offgen.ai",
+    "url": "https://offgen.ai"
+  },
+  "homepage": "https://offgen.ai",
+  "license": "Proprietary",
+  "keywords": ["powerpoint", "pptx", "presentations", "slides", "mcp"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "offgen",
+        "shortDescription": "Branded PowerPoint decks from your offgen workflows",
+        "developerName": "offgen",
+        "category": "Productivity",
+        "websiteURL": "https://offgen.ai",
+        "defaultPrompt": ["Create this month's sales deck with offgen"]
+      }
+    }
+  }
+}

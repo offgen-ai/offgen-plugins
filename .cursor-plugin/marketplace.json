@@ -1,0 +1,14 @@
+{
+  "name": "offgen",
+  "owner": {
+    "name": "offgen",
+    "email": "support@offgen.ai"
+  },
+  "plugins": [
+    {
+      "name": "offgen",
+      "source": "./plugins/offgen",
+      "description": "Generate branded, consultant-quality PowerPoint decks from your organization's offgen workflows."
+    }
+  ]
+}

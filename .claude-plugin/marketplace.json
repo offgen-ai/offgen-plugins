@@ -1,0 +1,19 @@
+{
+  "name": "offgen",
+  "owner": {
+    "name": "offgen",
+    "email": "support@offgen.ai"
+  },
+  "metadata": {
+    "description": "offgen plugins for Claude Code: generate branded PowerPoint decks from your offgen workflows."
+  },
+  "plugins": [
+    {
+      "name": "offgen",
+      "source": "./plugins/offgen",
+      "description": "Generate branded, consultant-quality PowerPoint decks from your organization's offgen workflows.",
+      "category": "productivity",
+      "homepage": "https://offgen.ai"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "ai.offgen/offgen",
+  "title": "offgen",
+  "description": "Generate branded PowerPoint presentations from your organization's offgen workflows.",
+  "version": "0.1.0",
+  "websiteUrl": "https://offgen.ai",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.offgen.ai/mcp",
+      "headers": [
+        {
+          "name": "X-API-Key",
+          "description": "Optional offgen API key (offgen_…). Leave empty to sign in with offgen (OAuth).",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

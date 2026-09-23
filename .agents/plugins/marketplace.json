@@ -1,0 +1,20 @@
+{
+  "name": "offgen",
+  "interface": {
+    "displayName": "offgen"
+  },
+  "plugins": [
+    {
+      "name": "offgen",
+      "source": {
+        "source": "local",
+        "path": "./plugins/offgen"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

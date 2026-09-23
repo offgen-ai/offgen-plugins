@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "offgen": {
+      "type": "http",
+      "url": "https://api.offgen.ai/mcp",
+      "headers": {
+        "X-API-Key": "${user_config.offgen_api_key}"
+      }
+    }
+  }
+}
