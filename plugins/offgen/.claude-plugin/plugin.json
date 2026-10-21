@@ -8,6 +8,8 @@
     "url": "https://offgen.ai"
   },
   "homepage": "https://offgen.ai",
+  "icon": ".claude-plugin/icon.png",
+  "privacyPolicyUrl": "https://www.offgen.ai/en/privacy",
   "license": "Proprietary",
   "keywords": ["powerpoint", "pptx", "presentations", "slides", "mcp"],
   "userConfig": {
