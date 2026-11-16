@@ -1,6 +1,6 @@
 ---
 name: offgen-templates
-description: Onboard, find and use offgen Library slide templates. Use when the user wants to turn a slide or a whole .pptx into reusable company templates, find a template ("do we have a timeline slide?"), or build slides or a deck on their own templates and brand.
+description: Onboard, find and use offgen Library slide templates, and turn a picture of a slide into an editable slide. Use when the user wants to turn a slide or a whole .pptx into reusable company templates, find a template ("do we have a timeline slide?"), or build slides or a deck on their own templates and brand, or rebuild a screenshot or image of a slide as editable PowerPoint.
 license: Proprietary
 compatibility: Requires the offgen MCP server (https://api.offgen.ai/mcp) to be connected. Works with tool calls only; a shell (curl) helps for large files.
 metadata:
@@ -35,6 +35,13 @@ Templates with different slide sizes (16:9 and 4:3) can't share a deck. A `locke
 1. `upload_presentation`: a deck under 4 MB can go in `base64`; otherwise call it without and run the returned `curl` line.
 2. `onboard_templates` with the `uploadId`. One template per slide; `slideNumbers` (1-based) keeps only some (at most 30 per call). The organization library is the default; if permissions refuse it, ask the user or use `space: "my"`. A retry with the same upload returns the same templates.
 3. Analysis takes 1–3 minutes: `get_template` with `waitForAnalysis: true` until every `analysisStatus` is `READY`.
+
+## Turn a picture of a slide into an editable slide
+
+1. `upload_presentation` with the PNG/JPEG (screenshot, photo, generated image).
+2. `convert_image_to_slide` with `imageUploadId` and the frame: `pptxUploadId` (an uploaded .pptx in the user's brand), or a `designSystemId` from `list_design_systems`; with neither, the organization's default design system is used. Add `instructions` for what to keep or change.
+3. It takes 1–3 minutes. While `pollAgain` is true, call it again with only the `jobId`; don't repeat the inputs to poll. The same inputs recover a running or finished conversion, but after a failed, cancelled or slide-less one they start a new paid attempt (at most three in all): retry only when the user wants it.
+4. Compare the preview with the picture and give the user the download link. `draft: true` means open issues remain: say so.
 
 ## Advanced: edit locally (coding agents)
 
